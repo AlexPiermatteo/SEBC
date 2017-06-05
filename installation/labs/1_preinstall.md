@@ -275,21 +275,37 @@ Disk label type: gpt
 
  ## 4. Show that transparent hugepages is disabled
 ```
-[ec2-user@ip-10-0-0-22 ~]$ ansible -i alexcluster all -a 'cat /sys/kernel/mm/transparent_hugepage/enabled'
-ip-10-0-0-120.eu-west-1.compute.internal | SUCCESS | rc=0 >>
-[always] madvise never
-
-ip-10-0-0-22.eu-west-1.compute.internal | SUCCESS | rc=0 >>
-[always] madvise never
-
+[ec2-user@ip-10-0-0-22 ~]$ ansible -i alexcluster  all -a "bash -c \"echo never > /sys/k ernel/mm/transparent_hugepage/defrag\"" --become
 ip-10-0-0-206.eu-west-1.compute.internal | SUCCESS | rc=0 >>
-[always] madvise never
+
 
 ip-10-0-0-161.eu-west-1.compute.internal | SUCCESS | rc=0 >>
-[always] madvise never
+
 
 ip-10-0-0-223.eu-west-1.compute.internal | SUCCESS | rc=0 >>
-[always] madvise never
+
+
+ip-10-0-0-120.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+ip-10-0-0-22.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+[ec2-user@ip-10-0-0-22 ~]$ ansible -i alexcluster  all -a "bash -c \"echo never > /sys/k ernel/mm/transparent_hugepage/enabled\"" --become
+ip-10-0-0-120.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+ip-10-0-0-161.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+ip-10-0-0-206.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+ip-10-0-0-223.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
+
+ip-10-0-0-22.eu-west-1.compute.internal | SUCCESS | rc=0 >>
+
 ```
 
 ## 5. Report the network interface attributes
