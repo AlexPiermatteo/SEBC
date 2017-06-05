@@ -22,21 +22,6 @@ All the following commands need to be executed on both replicas, so on hosts seb
 [ec2-user@ip-10-0-0-22 ~]$ mysql_secure_installation
 
 
-
-NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
-      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
-
-In order to log into MySQL to secure it, we'll need the current
-password for the root user.  If you've just installed MySQL, and
-you haven't set the root password yet, the password will be blank,
-so you should just press enter here.
-
-Enter current password for root (enter for none):
-OK, successfully used password, moving on...
-
-Setting the root password ensures that nobody can log into the MySQL
-root user without the proper authorisation.
-
 Set root password? [Y/n] n
 
 Remove anonymous users? [Y/n] y

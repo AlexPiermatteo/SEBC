@@ -273,7 +273,7 @@ Disk label type: gpt
  2         4096    209715166    100G  Microsoft basic
  ```
 
- ## 4. Show that transparent hugepages is disabled
+ ## 4. Disable the transparent hugepages
 ```
 [ec2-user@ip-10-0-0-22 ~]$ ansible -i alexcluster  all -a "bash -c \"echo never > /sys/k ernel/mm/transparent_hugepage/defrag\"" --become
 ip-10-0-0-206.eu-west-1.compute.internal | SUCCESS | rc=0 >>
