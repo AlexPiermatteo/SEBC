@@ -1,13 +1,13 @@
 ## Installation Cloudera Manager Server Packages
 The first step is to add the cloudera manager repos. To do that, the following command has been executed on every node:
 ```
-[ec2-user@ip-172-20-0-4 ~]$ wget https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/cloudera-manager.repo
-[ec2-user@ip-172-20-0-4 ~]$ sudo cp cloudera-manager.repo /etc/yum.repos.d
+[ec2-user@ip-10-0-0-22 ~]$ wget https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/cloudera-manager.repo
+[ec2-user@ip-10-0-0-22 ~]$ sudo cp cloudera-manager.repo /etc/yum.repos.d
 ```
 
 The cloudera Manager Server packages are installed on the same node where the database is running, so on sebc1:
 ```
-[ec2-user@ip-172-20-0-4 ~]$ sudo yum install cloudera-manager-daemons cloudera-manager-server -y
+[ec2-user@ip-10-0-0-22 ~]$ sudo yum install cloudera-manager-daemons cloudera-manager-server -y
 ```
 And ran `scm_prepare_database.sh`:
 ```
@@ -15,7 +15,7 @@ sudo /usr/share/cmf/schema/scm_prepare_database.sh -u root --password=cloudera%%
 ```
 Once the database is configured, we can start the cloudera server service:
 ```
-[ec2-user@ip-172-20-0-4 ~]$ sudo service cloudera-scm-server start
+[ec2-user@ip-10-0-0-22 ~]$ sudo service cloudera-scm-server start
 ```
 
 ## Installation Cloudera manager agents
@@ -32,5 +32,5 @@ And setup the databases connection using the previously set credentials:
 
 In the next page leave default settings and wait for the services to be deployed and started.
 
-Once it started, you can check the status of CM on http://padrinocluster1:7180
+Once it started, you can check the status of CM on http://ec2-54-194-118-24.eu-west-1.compute.amazonaws.com:7180
 ![cm](./3_cm_installed.png)
