@@ -1,3 +1,4 @@
+```
 [ec2-user@ip-10-0-0-47 ~]$ ansible -i alexcluster all -a 'mysql --version'
 ip-10-0-0-23.eu-west-1.compute.internal | SUCCESS | rc=0 >>
 mysql  Ver 14.14 Distrib 5.5.56, for Linux (x86_64) using readline 5.1
@@ -47,3 +48,4 @@ mysql> show databases;
 
 mysql> exit
 Bye
+```
