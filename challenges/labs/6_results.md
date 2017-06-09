@@ -1,3 +1,5 @@
+## beeline sentry results
+```
 !connect jdbc:hive2://localhost:10000/default;principal=hive/ip-10-0-0-124.eu-west-1.compute.internal@ALEXPIERMATTEO.COM.UK
 CREATE ROLE politican1;
 
@@ -70,3 +72,5 @@ INFO  : OK
 +------------+--+
 4 rows selected (0.308 seconds)
 0: jdbc:hive2://localhost:10000/default>
+
+```

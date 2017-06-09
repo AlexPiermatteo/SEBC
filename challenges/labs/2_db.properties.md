@@ -13,6 +13,12 @@ sudo head /var/log/cloudera-scm-server/cloudera-scm-server.log
 2017-06-09 05:22:27,691 INFO main:com.cloudera.cmon.TimeSeriesAttribute: Registered TimeSeriesAttribute roleConfigGroup as ROLECONFIGGROUP
 ```
 
+## jetty server
+```
+[ec2-user@ip-10-0-0-124 ~]$ cat /var/log/cloudera-scm-server/* |grep  "Started Jett"
+2017-06-09 04:35:42,431 INFO WebServerImpl:com.cloudera.server.cmf.WebServerImpl: Started Jetty server.
+```
+
 ## db.properties
 ```
 [ec2-user@ip-10-0-0-124 ~]$ sudo cat /etc/cloudera-scm-server/db.properties
