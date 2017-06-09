@@ -1,7 +1,7 @@
 ## teragen command
 ```
 
-time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen -Dmapredu ce.job.maps=6 -Ddfs.block.size=33554432 51200000 tgen512m
+time hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen -Dmapreduce.job.maps=6 -Ddfs.block.size=33554432 51200000 tgen512m
 
 ```
 
@@ -18,9 +18,15 @@ sys     0m2.065s
 ```
 
 [theresa@ip-10-0-0-47 ec2-user]$ hdfs dfs -ls /user/theresa/tgen512m
-Found 2 items
--rw-r--r--   3 theresa supergroup          0 2017-06-09 06:11 /user/theresa/tgen512m/_SUCCESS
--rw-r--r--   3 theresa supergroup 5120000000 2017-06-09 06:11 /user/theresa/tgen512m/part-m-00000
+hdfs dfs -ls /user/theresa/tgen512m
+Found 7 items
+-rw-r--r--   3 theresa supergroup          0 2017-06-09 05:00 /user/theresa/tgen512m/_SUCCESS
+-rw-r--r--   3 theresa supergroup  853333400 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00000
+-rw-r--r--   3 theresa supergroup  853333300 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00001
+-rw-r--r--   3 theresa supergroup  853333300 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00002
+-rw-r--r--   3 theresa supergroup  853333400 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00003
+-rw-r--r--   3 theresa supergroup  853333300 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00004
+-rw-r--r--   3 theresa supergroup  853333300 2017-06-09 05:00 /user/theresa/tgen512m/part-m-00005
 ```
 
 ```
