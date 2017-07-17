@@ -1,5 +1,6 @@
 ## Install cloudera manager server
 The first step is to add the repo on every node:
+[MFE: Why every node?]
 ```
 [ec2-user@ip-10-0-0-47 ~]$ ansible -i alexcluster  all -a 'wget https://archive.cloudera.com/cm5/redhat/7/x86_64/cm/cloudera-manager.repo'
  [WARNING]: Consider using get_url or uri module rather than running wget
