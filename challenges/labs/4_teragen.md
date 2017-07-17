@@ -37,8 +37,13 @@ Instead use the hdfs command for it.
 Connecting to namenode via http://ip-10-0-0-47.eu-west-1.compute.internal:50070
 FSCK started by theresa (auth:SIMPLE) from /10.0.0.47 for path /user/theresa/tgen512m at Fri Jun 09 06:13:52 EDT 2017 ..Status: HEALTHY
  Total size:    5120000000 B
+ ```
+ Please explain this discrepancy against the output. How are there only two files here?
+ ```
  Total dirs:    1
  Total files:   2
+ ```
+ ```
  Total symlinks:                0
  Total blocks (validated):      153 (avg. block size 33464052 B)
  Minimally replicated blocks:   153 (100.0 %)
